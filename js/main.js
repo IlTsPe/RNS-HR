@@ -1,0 +1,1 @@
+new Swiper(".hero-slider",{slidesPerView:1,navigation:{nextEl:".hero__next",prevEl:".hero__prev"},pagination:{el:".swiper-pagination",type:"bullets",clickable:!0},simulateTouch:!1});
