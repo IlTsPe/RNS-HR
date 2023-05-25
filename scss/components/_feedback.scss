@@ -1,0 +1,51 @@
+.feedback {
+  padding-top: 130px;
+  font-family: 'Inter', sans-serif;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+
+    & input {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    position: relative;
+
+    & input {
+      padding: 22px 12px;
+      font-weight: 700;
+      font-size: 40px;
+      border: 1px solid var(--white-color);
+      border-radius: 5px;
+      color: var(--white-color);
+      background-color: transparent;
+
+      &:focus-visible {
+        transition: all ease-in 0.15s;
+        box-shadow: 0px 0px 8px 1px var(--white-color);
+      }
+
+      &:focus::placeholder {
+        transition: opacity ease-in 0.15s;
+        opacity: 0.5;
+      }
+    }
+
+    & label {
+      display: block;
+      position: absolute;
+      top: -11%;
+      left: 1%;
+      transform: translate(11%, -1%);
+      padding: 0 2px;
+      font-weight: 300;
+      font-size: 20px;
+      background-color: var(--liquorice-color);
+    }
+  }
+}

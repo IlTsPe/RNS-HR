@@ -1,0 +1,12 @@
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --liquorice-color: #0d1e29;
+  --grey-color: #9ea5a9;
+  --denim-color: #1264B6;
+  --red-color: red;
+  --yellow-color: #faff00;
+
+  // sections' padding
+  --padding-top: clamp(1.875rem, 0.625rem + 6.25vw, 8.125rem);
+}

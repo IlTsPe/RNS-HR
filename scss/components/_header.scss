@@ -1,0 +1,49 @@
+.header {
+  padding-top: 34px;
+  padding-bottom: 18px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--grey-color);
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__item {
+    position: relative;
+    cursor: pointer;
+
+    &:nth-child(4) {
+
+      & svg {
+        transition: ease-in 0.12s;
+      }
+
+      &:hover svg {
+        opacity: 1;
+      }
+    }
+
+    &--hover {
+      transition: all ease-in 0.12s;
+
+      &:hover,
+      &:focus {
+        color: var(--white-color);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+
+  &__contacts {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__mail {
+    font-size: 14px;
+  }
+}

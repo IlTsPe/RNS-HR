@@ -1,0 +1,56 @@
+.corp-life {
+  padding-top: var(--padding-top);
+  position: relative;
+
+  &__pagination {
+    margin-top: 20px;
+  }
+
+  &__next {
+    right: 20px;
+  }
+
+  &__prev {
+    left: 20px;
+  }
+
+  &-btn {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.corp-life-slide {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
+
+  &__card {
+    position: relative;
+    margin-bottom: 70px;
+    width: 445px;
+    transform: translateY(0px);
+    transition: ease-in 0.3s;
+  }
+
+  &__img {
+    border-radius: 10px;
+  }
+
+  &__descr {
+    padding: 8px 0;
+    position: absolute;
+    bottom: 4%;
+    left: 5%;
+    right: 5%;
+    font-size: 28px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--liquorice-color);
+  }
+}
+
+.swiper-slide-active>.corp-life-slide__card {
+  transform: translateY(50px);
+}

@@ -1,0 +1,47 @@
+@import "./vendor/normalize";
+@import "vars";
+@import "fonts";
+
+body {
+  font-family: 'Manrope';
+  font-weight: 700;
+  font-size: 40px;
+  background-color: var(--liquorice-color);
+  color: var(--white-color);
+}
+
+.container {
+  max-width: 1353px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+// \* {
+//   outline: 1px solid red !important;
+// }
+
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/menu-burger";
+@import "./components/hero";
+@import "./components/partners";
+@import "./components/tasks";
+@import "./components/conditions";
+@import "./components/feedback";
+@import "./components/corp-life";
+@import "./components/faq";
+@import "./components/services";
+
+// общие стили
+@import "./general";
+
+// media
+@import "./media";
