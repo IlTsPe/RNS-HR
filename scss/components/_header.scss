@@ -1,8 +1,7 @@
 .header {
-  padding-top: 34px;
-  padding-bottom: 18px;
-  font-weight: 600;
+  padding: 33px;
   font-size: 16px;
+  font-weight: 600;
   color: var(--grey-color);
 
   &__list {
@@ -13,7 +12,14 @@
 
   &__item {
     position: relative;
+    transition: all ease-in 0.12s;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: var(--white-color);
+      transform: translateY(-2px);
+    }
 
     &:nth-child(4) {
 
@@ -25,18 +31,7 @@
         opacity: 1;
       }
     }
-
-    &--hover {
-      transition: all ease-in 0.12s;
-
-      &:hover,
-      &:focus {
-        color: var(--white-color);
-        transform: translateY(-2px);
-      }
-    }
   }
-
 
   &__contacts {
     flex-direction: column;
@@ -45,5 +40,6 @@
 
   &__mail {
     font-size: 14px;
+    font-weight: 400;
   }
 }

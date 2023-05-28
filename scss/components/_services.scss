@@ -1,12 +1,18 @@
 .services {
   padding-top: 130px;
   padding-bottom: 130px;
+  position: relative;
 
   &__title {
     margin-bottom: 25px;
   }
 
-  &-slider {
+  &__container {
+    height: 100%;
+  }
+
+  &-slide {
+    position: relative;
     color: var(--liquorice-color);
     background-color: var(--white-color);
     transition: ease-out 0.3s;
@@ -14,14 +20,6 @@
     &:hover {
       background-color: var(--yellow-color);
     }
-  }
-
-  &__img {
-    z-index: 2;
-  }
-
-  &-slide {
-    position: relative;
 
     &::before {
       content: '';
@@ -51,110 +49,22 @@
   }
 
   &-content {
+    padding-top: 70px;
+    display: flex;
     height: 100%;
 
-    display: flex;
-    padding-top: 70px;
-
-
-
-    // &::after {
-    //   content: '';
-    //   position: absolute;
-    //   bottom: 0;
-    //   background-repeat: no-repeat;
-    //   background-size: auto;
-    //   background-position: bottom;
-    //   width: 100%;
-    //   height: 100%;
-    //   z-index: 10;
-    // }
-
-    &--1 {
-
-
-
-      // &::after {
-      //   left: -560px;
-      //   background-image: url(../img/services--1.png);
-      // }
+    &--reverse {
+      flex-direction: row-reverse;
     }
+  }
 
-    &--2 {
-      &::before {
-        background-image: url(../img/helmet--2.png);
-        right: -672px;
-        top: -660px;
-        z-index: 20;
-      }
-
-      &:hover::before {
-        opacity: 1;
-        visibility: visible;
-        top: -630px;
-      }
-
-      &::after {
-        right: -650px;
-        background-image: url(../img/services--2.png);
-      }
-    }
-
-    &--3 {
-      &::before {
-        background-image: url(../img/gun--3.png);
-        left: -695px;
-        top: -560px;
-        z-index: 20;
-      }
-
-      &:hover::before {
-        opacity: 1;
-        visibility: visible;
-        top: -545px;
-      }
-
-      &::after {
-        left: -700px;
-        background-image: url(../img/services--3.png);
-      }
-    }
-
-    &--thum {
-      ::before {
-        content: '';
-        position: absolute;
-        top: 145px;
-        left: -865px;
-        background-image: url(../img/thum--3.png);
-        background-repeat: no-repeat;
-        background-size: auto;
-        background-position: top;
-        width: 100%;
-        height: 100%;
-        z-index: 99;
-      }
-
-      ::after {
-        content: '';
-        position: absolute;
-        top: 168px;
-        left: -827px;
-        background-image: url(../img/big-thum--3.png);
-        background-repeat: no-repeat;
-        background-size: auto;
-        background-position: top;
-        width: 100%;
-        height: 100%;
-        z-index: 99;
-      }
-    }
-
+  &__img {
+    max-width: 538px;
+    z-index: 10;
   }
 
   &__content--1 {
     padding-top: 65px;
-    height: 100%;
   }
 
   &__subtitle {
@@ -184,10 +94,6 @@
     }
   }
 
-  &-slider {
-    position: relative;
-  }
-
   &__next {
     right: 50px;
   }
@@ -196,39 +102,24 @@
     left: 50px;
   }
 
+  &-btn {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   &__pagination {
     position: absolute;
-    bottom: 76px;
+    bottom: 200px;
     left: 50%;
     transform: translateX(-50%);
+
+    & .swiper-pagination-bullet {
+      background-color: var(--liquorice-color);
+
+      &-active {
+        background-color: var(--grey-color);
+      }
+    }
+
   }
 }
-
-#map {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  filter: invert(1);
-  z-index: 4;
-  position: relative;
-}
-
-.ymaps-2-1-79-image {
-  filter: invert(1);
-}
-
-// .map-text {
-//   position: absolute;
-//   padding: 24px 0;
-//   top: 310px;
-//   left: 620px;
-//   border-radius: 50px;
-//   max-width: 407px;
-//   text-align: center;
-//   font-size: 38px;
-//   color: var(--black-color);
-//   background-color: var(--white-color);
-//   z-index: 2;
-//   filter: invert(1);
-// }

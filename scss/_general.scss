@@ -20,6 +20,8 @@
   display: flex;
 
   & a {
+    transition: all ease-in 0.12s;
+
     &:hover {
       color: rgba(255, 255, 255, 1);
     }
@@ -39,13 +41,11 @@
 
 .slider-btn {
   position: absolute;
-  // top: 58%;
-  // transform: translateY(-58%);
   width: 80px;
   height: 80px;
 
   &:focus-visible {
-    border: 5px solid var(--white-color);
+    border: 5px solid var(--red-color);
     border-radius: 5px;
   }
 
@@ -67,18 +67,26 @@
   }
 
   &--dark {
+
     & svg {
-      fill: rgba(0, 0, 0, 0.5)
+      fill: rgba(0, 0, 0, 0.5);
+      transition: all ease-in 0.15s;
+
+      &:hover {
+        fill: rgba(0, 0, 0, 0.8);
+      }
     }
 
     &:disabled svg {
       fill: var(--black-color);
+      cursor: default;
     }
   }
 }
 
 .swiper {
   overflow: hidden;
+  width: 100%;
 }
 
 .swiper-wrapper {

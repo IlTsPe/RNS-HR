@@ -1,40 +1,9 @@
 .hero {
   position: relative;
-  background-color: #fff;
+  background-color: var(--white-color);
 
   &__swiper {
     height: 100vh;
-  }
-
-  &__content {
-    margin-left: 92px;
-  }
-
-  &__title {
-    margin-bottom: 28px;
-    max-width: 520px;
-  }
-
-  &__text {
-    margin-bottom: 17px;
-    font-size: clamp(1.75rem, 1.55rem + 1vw, 2.75rem);
-    font-weight: 700;
-    line-height: 150%;
-    max-width: 680px;
-  }
-
-  &__managers {
-    font-family: Manrope;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 167%;
-    max-width: 380px;
-
-    &--upper {
-      display: inline-block;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
   }
 
   &-slide {
@@ -57,11 +26,44 @@
     &--3 {
       background-image: url(../img/hero-slide3.jpg);
     }
+
+    &--4 {
+      background-image: url(../img/hero-slide4.jpg);
+    }
+
+    &--5 {
+      background-image: url(../img/hero-slide5.jpg);
+    }
   }
 
-  &-align {
-    top: 50%;
-    transform: translateY(-50%);
+  &__content {
+    margin-left: 92px;
+  }
+
+  &__title {
+    margin-bottom: 28px;
+    max-width: 520px;
+  }
+
+  &__text {
+    margin-bottom: 17px;
+    font-size: clamp(1.75rem, 1.55rem + 1vw, 2.75rem);
+    font-weight: 700;
+    line-height: 150%;
+    max-width: 680px;
+  }
+
+  &__managers {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 167%;
+    max-width: 380px;
+
+    &--upper {
+      display: inline-block;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
   }
 
   &__next {

@@ -1,3 +1,9 @@
+// @media (max-width: 1040px) {
+//   .services-content {
+//     flex-direction: column-reverse;
+//   }
+// }
+
 @media (max-width: 900px) {
   .header {
     &__logo {
@@ -124,6 +130,10 @@
       margin-bottom: 15px;
     }
 
+    &__text {
+      margin-bottom: 11px;
+    }
+
     &__managers {
       font-size: 14px;
     }
@@ -132,16 +142,16 @@
       bottom: 30px;
     }
 
+    &-btn {
+      top: 94%;
+    }
+
     &__next {
       right: 20px;
     }
 
     &__prev {
       left: 20px;
-    }
-
-    &-btn {
-      top: 94%;
     }
   }
 

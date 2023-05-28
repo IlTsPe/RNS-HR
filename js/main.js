@@ -1,6 +1,6 @@
 /* Swiper */
 
-const swiperHeroJs = new Swiper('.swiper-hero', {
+const hero = new Swiper('.swiper-hero--js', {
   slidesPerView: 1,
   navigation: {
     nextEl: '.hero__next',
@@ -16,10 +16,32 @@ const swiperHeroJs = new Swiper('.swiper-hero', {
   },
   autoplay: true,
   delay: 3000,
-  disableOnInteraction: true,
   simulateTouch: true,
   speed: 800,
 });
+
+const swiperNames = [hero];
+
+function stop(swiperNameArr, ...section) {
+  for (let i = 0; i <= swiperNameArr.length - 1; i++) {
+    let sectionName = `.${[...section][i]}`;
+    document.querySelector(sectionName).addEventListener('mouseenter', () => {
+      swiperNameArr[i].autoplay.stop();
+    });
+  }
+}
+
+function start(swiperNameArr, ...section) {
+  for (let i = 0; i <= swiperNameArr.length - 1; i++) {
+    let sectionName = `.${[...section][i]}`;
+    document.querySelector(sectionName).addEventListener('mouseleave', () => {
+      swiperNameArr[i].autoplay.start();
+    });
+  }
+}
+
+stop(swiperNames, 'hero');
+start(swiperNames, 'hero');
 
 const tasks = new Swiper('.swiper-tasks', {
   spaceBetween: 15,
