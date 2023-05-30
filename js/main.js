@@ -111,6 +111,7 @@ new Swiper('.swiper-services--js', {
     clickable: true,
   },
   simulateTouch: false,
+  // autoHeight: true,
   speed: 800,
 });
 

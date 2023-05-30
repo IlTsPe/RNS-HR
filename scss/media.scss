@@ -1,3 +1,27 @@
+@media (max-width: 940px) {
+  .services {
+    &__img {
+      width: min-content;
+
+    }
+
+    &-content {
+      padding-top: 25px;
+      grid-template-columns: auto;
+      align-items: end;
+
+      &>img {
+        order: 2;
+        height: 100%;
+      }
+    }
+
+    &__descr {
+      padding-top: 25px;
+    }
+  }
+}
+
 @media (max-width: 900px) {
   .header {
     &__logo {
@@ -76,21 +100,6 @@
 
   .conditions-btn {
     top: 51%;
-  }
-
-  .services {
-    &-content {
-      padding-top: 25px;
-      grid-template-columns: auto;
-
-      &>img {
-        order: 2;
-      }
-    }
-
-    &__descr {
-      padding-top: 25px;
-    }
   }
 
   .common-button {
