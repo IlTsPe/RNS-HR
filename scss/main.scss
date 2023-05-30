@@ -2,6 +2,7 @@
 @import "vars";
 @import "fonts";
 
+
 body {
   font-family: 'Manrope';
   font-weight: 700;
@@ -27,6 +28,8 @@ body {
 //   outline: 1px solid red !important;
 // }
 
+// общие стили
+@import "./general";
 
 // подключения компонентов страницы
 @import "./components/header";
@@ -39,10 +42,6 @@ body {
 @import "./components/faq";
 @import "./components/services";
 @import "./components/feedback";
-@import "./components/map";
-
-// общие стили
-@import "./general";
 
 // media
 @import "./media";

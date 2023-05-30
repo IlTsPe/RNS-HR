@@ -1,9 +1,3 @@
-// @media (max-width: 1040px) {
-//   .services-content {
-//     flex-direction: column-reverse;
-//   }
-// }
-
 @media (max-width: 900px) {
   .header {
     &__logo {
@@ -84,6 +78,21 @@
     top: 51%;
   }
 
+  .services {
+    &-content {
+      padding-top: 25px;
+      grid-template-columns: auto;
+
+      &>img {
+        order: 2;
+      }
+    }
+
+    &__descr {
+      padding-top: 25px;
+    }
+  }
+
   .common-button {
     padding: 24px;
   }
@@ -155,6 +164,17 @@
     }
   }
 
+  .partners {
+    &__list {
+      flex-wrap: nowrap;
+      overflow: auto;
+    }
+
+    &__content {
+      line-height: 120%;
+    }
+  }
+
   .tasks-btn {
     top: 105%;
   }
@@ -166,6 +186,28 @@
 
     &__pagination {
       margin-top: 33px;
+    }
+  }
+
+  .corp-life {
+    &-slide__descr {
+      font-size: 22px;
+    }
+  }
+}
+
+@media (max-width:655px) {
+  .feedback__descr {
+    margin-bottom: 40px;
+  }
+
+  .telegram {
+    padding-left: 28px;
+
+    &::before {
+      left: -2px;
+      width: 28px;
+      height: 28px;
     }
   }
 }
@@ -195,15 +237,21 @@
     }
   }
 
-  .swiper-slide-active>.corp-life-slide__card {
+  .swiper-slide-active>.corp-life-slide {
     transform: translateY(0px);
   }
 }
 
 @media (max-width:550px) {
-  .container--flex {
-    gap: 20px;
+  .header {
+    padding: 33px 0px;
   }
+
+  .header .container--flex {
+    gap: 20px;
+    justify-content: center;
+  }
+
 }
 
 @media (max-width:480px) {
@@ -221,16 +269,10 @@
 
 }
 
-@media (max-width:440px) {
-  .header .container--flex {
-    justify-content: flex-end;
-  }
-}
-
-@media (max-width:375px) {
+@media (max-width:380px) {
   .header {
-    &__logo {
-      width: 35%;
+    & .container--flex {
+      justify-content: right;
     }
   }
 }

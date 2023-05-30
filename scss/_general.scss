@@ -9,6 +9,10 @@
   clip: rect(0 0 0 0);
 }
 
+.js-scroll {
+  overflow: hidden;
+}
+
 .container--flex {
   position: relative;
   display: flex;
@@ -32,7 +36,8 @@
   font-family: 'Manrope', sans-serif;
   font-size: clamp(2.188rem, 1.775rem + 2.06vw, 4.25rem);
   font-weight: 800;
-
+  line-height: 113%;
+  margin-bottom: clamp(1.800rem, 1.570rem + 0.94vw, 4.5rem);
 }
 
 .text--grey {
@@ -180,7 +185,6 @@
         transition: ease-in-out 0.3s;
       }
     }
-
   }
 
   &__content {
@@ -207,4 +211,37 @@
   top: 44%;
   transform: translateY(-44%);
   transform: rotate(180deg);
+}
+
+#preloader {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--liquorice-color);
+}
+
+#preloader.hide-preloader {
+  animation: hidePreloader 1s;
+}
+
+#preloader.preloader-hidden {
+  display: none;
+}
+
+@keyframes hidePreloader {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }

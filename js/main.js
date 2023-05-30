@@ -1,3 +1,5 @@
+'use strict'
+
 /* Swiper */
 
 const hero = new Swiper('.swiper-hero--js', {
@@ -19,29 +21,6 @@ const hero = new Swiper('.swiper-hero--js', {
   simulateTouch: true,
   speed: 800,
 });
-
-const swiperNames = [hero];
-
-function stop(swiperNameArr, ...section) {
-  for (let i = 0; i <= swiperNameArr.length - 1; i++) {
-    let sectionName = `.${[...section][i]}`;
-    document.querySelector(sectionName).addEventListener('mouseenter', () => {
-      swiperNameArr[i].autoplay.stop();
-    });
-  }
-}
-
-function start(swiperNameArr, ...section) {
-  for (let i = 0; i <= swiperNameArr.length - 1; i++) {
-    let sectionName = `.${[...section][i]}`;
-    document.querySelector(sectionName).addEventListener('mouseleave', () => {
-      swiperNameArr[i].autoplay.start();
-    });
-  }
-}
-
-stop(swiperNames, 'hero');
-start(swiperNames, 'hero');
 
 const tasks = new Swiper('.swiper-tasks', {
   spaceBetween: 15,
@@ -73,8 +52,9 @@ const tasks = new Swiper('.swiper-tasks', {
   },
 });
 
-new Swiper('.swiper-conditions', {
+const conditions = new Swiper('.swiper-conditions--js', {
   slidesPerView: 1,
+  spaceBetween: 20,
   navigation: {
     nextEl: '.conditions__next',
     prevEl: '.conditions__prev',
@@ -87,7 +67,7 @@ new Swiper('.swiper-conditions', {
   speed: 600,
 });
 
-new Swiper('.swiper-corp-life', {
+const corpLife = new Swiper('.swiper-corp-life--js', {
   spaceBetween: 24,
   navigation: {
     nextEl: '.corp-life__next',
@@ -97,11 +77,11 @@ new Swiper('.swiper-corp-life', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  simulateTouch: false,
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false,
-  // },
+  simulateTouch: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   speed: 600,
   loop: true,
   centeredSlides: true,
@@ -120,7 +100,7 @@ new Swiper('.swiper-corp-life', {
   }
 });
 
-new Swiper('.swiper-services', {
+new Swiper('.swiper-services--js', {
   slidesPerView: 1,
   navigation: {
     nextEl: '.services__next',
@@ -132,8 +112,31 @@ new Swiper('.swiper-services', {
   },
   simulateTouch: false,
   speed: 800,
-  autoHeight: true,
 });
+
+
+const swiperNames = [hero, conditions, corpLife];
+
+function stopAutoPlay(swiperNamesArr, ...section) {
+  for (let i = 0; i <= swiperNamesArr.length - 1; i++) {
+    let sectionName = `.${[...section][i]}`;
+    document.querySelector(sectionName).addEventListener('mouseenter', () => {
+      swiperNamesArr[i].autoplay.stop();
+    });
+  }
+}
+
+function startAutoPlay(swiperNamesArr, ...section) {
+  for (let i = 0; i <= swiperNamesArr.length - 1; i++) {
+    let sectionName = `.${[...section][i]}`;
+    document.querySelector(sectionName).addEventListener('mouseleave', () => {
+      swiperNamesArr[i].autoplay.start();
+    });
+  }
+}
+
+stopAutoPlay(swiperNames, 'hero', 'conditions', 'corp-life');
+startAutoPlay(swiperNames, 'hero', 'conditions', 'corp-life');
 
 
 /* Accordion */
@@ -171,66 +174,67 @@ const burger = document.querySelector('.burger'),
   menu = document.querySelector('.menu'),
   overlay = document.querySelector('.menu__overlay'),
   close = document.querySelector('.menu__close'),
-  body = document.querySelector('body'),
-  closeMenu = document.querySelector('.menu__close'),
-  closeOver = document.querySelector('.menu__overlay');
+  body = document.querySelector('body');
 
 burger.addEventListener('click', () => {
   menu.classList.add('active');
+  body.classList.add('js-scroll');
 });
 
 close.addEventListener('click', () => {
   menu.classList.remove('active');
+  body.classList.remove('js-scroll');
 });
 
 overlay.addEventListener('click', () => {
   menu.classList.remove('active');
-});
-
-burger.addEventListener('click', () => {
-  body.classList.add('js-scroll');
-});
-
-closeMenu.addEventListener('click', () => {
-  body.classList.remove('js-scroll');
-});
-
-closeOver.addEventListener('click', () => {
   body.classList.remove('js-scroll');
 });
 
 
 /* Map */
 
-ymaps.ready(function () {
-  const myMap = new ymaps.Map('map', {
-    center: [59.912026, 30.422444],
-    zoom: 13
-  }, {
-    searchControlProvider: 'yandex#search'
-  }),
+// ymaps.ready(function () {
+//   const myMap = new ymaps.Map('map', {
+//     center: [59.912026, 30.422444],
+//     zoom: 13
+//   }, {
+//     searchControlProvider: 'yandex#search'
+//   }),
 
-    // Создаём макет содержимого.
-    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-    ),
+//     // Создаём макет содержимого.
+//     MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+//       '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+//     ),
 
-    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-      hintContent: 'RNS Family',
-      balloonContent: ''
-    }, {
-      // Опции.
-      // Необходимо указать данный тип макета.
-      iconLayout: 'default#image',
-      // Своё изображение иконки метки.
-      iconImageHref: 'img/map.png',
-      // Размеры метки.
-      iconImageSize: [520, 182],
-      // Смещение левого верхнего угла иконки относительно
-      // её "ножки" (точки привязки).
-      iconImageOffset: [-50, -170]
-    });
+//     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+//       hintContent: 'RNS Family',
+//       balloonContent: ''
+//     }, {
+//       // Опции.
+//       // Необходимо указать данный тип макета.
+//       iconLayout: 'default#image',
+//       // Своё изображение иконки метки.
+//       iconImageHref: 'map.png',
+//       // Размеры метки.
+//       iconImageSize: [520, 182],
+//       // Смещение левого верхнего угла иконки относительно
+//       // её "ножки" (точки привязки).
+//       iconImageOffset: [-50, -170]
+//     });
 
-  myMap.geoObjects
-    .add(myPlacemark)
-});
+//   myMap.geoObjects
+//     .add(myPlacemark)
+// });
+
+/* Preloader */
+
+window.onload = function () {
+  let preloader = document.getElementById('preloader');
+  preloader.classList.add('hide-preloader');
+  body.classList.add('js-scroll');
+  setInterval(function () {
+    preloader.classList.add('preloader-hidden');
+    body.classList.remove('js-scroll');
+  }, 300);
+}

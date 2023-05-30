@@ -1,14 +1,9 @@
 .services {
-  padding-top: 130px;
-  padding-bottom: 130px;
+  padding-top: var(--padding-top);
   position: relative;
 
   &__title {
     margin-bottom: 25px;
-  }
-
-  &__container {
-    height: 100%;
   }
 
   &-slide {
@@ -50,8 +45,8 @@
 
   &-content {
     padding-top: 70px;
-    display: flex;
-    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
     &--reverse {
       flex-direction: row-reverse;
@@ -59,24 +54,24 @@
   }
 
   &__img {
-    max-width: 538px;
+    height: 100%;
     z-index: 10;
   }
 
-  &__content--1 {
-    padding-top: 65px;
+  &__descr {
+    padding-top: 70px;
   }
 
   &__subtitle {
-    margin-bottom: 72px;
+    margin-bottom: clamp(0.813rem, -0.05rem + 4.31vw, 5.125rem);
     font-weight: 800;
-    font-size: 60px;
+    font-size: clamp(2.188rem, 1.775rem + 2.06vw, 4.25rem);
     line-height: 113%;
   }
 
   &__text {
-    margin-bottom: 72px;
-    font-size: 38px;
+    margin-bottom: clamp(0.813rem, -0.05rem + 4.31vw, 5.125rem);
+    font-size: clamp(1.313rem, 1.038rem + 1.38vw, 2.688rem);
     line-height: 200%;
   }
 
@@ -109,7 +104,7 @@
 
   &__pagination {
     position: absolute;
-    bottom: 200px;
+    bottom: 55px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -120,6 +115,5 @@
         background-color: var(--grey-color);
       }
     }
-
   }
 }

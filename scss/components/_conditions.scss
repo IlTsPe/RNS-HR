@@ -1,6 +1,7 @@
 .conditions {
   padding-top: var(--padding-top);
   position: relative;
+  font-family: 'Inter', sans-serif;
 
   &__next {
     right: 20px;
@@ -16,14 +17,11 @@
 }
 
 .conditions-slide {
-
-  &__descr {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    gap: clamp(0.188rem, -0.963rem + 5.75vw, 5.938rem);
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: clamp(0.188rem, -0.963rem + 5.75vw, 5.938rem);
 
   &__text {
     font-size: clamp(1.5rem, 1.023rem + 2.39vw, 2.813rem);

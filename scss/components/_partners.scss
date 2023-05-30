@@ -1,12 +1,12 @@
 .partners {
   padding-top: var(--padding-top);
-  font-weight: 700;
 
   &__title {
     margin-bottom: 48px;
   }
 
   &__list {
+    margin-bottom: 18px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -56,8 +56,8 @@
     }
   }
 
-  &__text {
-    font-size: 38px;
+  &__others {
+    font-size: clamp(1.5rem, 1.530rem + 0.69vw, 3.220rem);
     line-height: 164%;
   }
 }
