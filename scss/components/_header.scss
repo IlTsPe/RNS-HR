@@ -15,6 +15,40 @@
     transition: all ease-in 0.12s;
     cursor: pointer;
 
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      background-color: red;
+      width: 0;
+      height: 2px;
+      transition: all ease-in 0.12s;
+
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -3px;
+      background-color: blue;
+      width: 0;
+      height: 2px;
+      transition: all ease-in 0.12s;
+
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+
+    &:hover::after {
+      width: 100%;
+      background-color: #fff;
+
+    }
+
     &:hover,
     &:focus {
       color: var(--white-color);

@@ -147,16 +147,16 @@
   &__item {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
 
     &:not(:last-child) {
-      margin-bottom: 60px;
+      margin-bottom: 30px;
     }
   }
 
   &__title {
     font-weight: 700;
-    font-size: clamp(1.663rem, 1.215rem + 1.88vw, 3.438rem);
+    font-size: 30px;
     line-height: 114%;
     text-align: inherit;
     margin-right: 12px;

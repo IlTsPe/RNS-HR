@@ -6,12 +6,30 @@
     height: 100vh;
   }
 
+  &-container {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+
+    &--2,
+    &--4,
+    &--5 {
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    &--3 {
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+  }
+
   &-slide {
     padding-top: 138px;
     height: 100vh;
     overflow: hidden;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center top;
     background-size: cover;
     background-color: var(--grey-color);
 
