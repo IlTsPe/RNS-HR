@@ -192,41 +192,40 @@ overlay.addEventListener('click', () => {
   body.classList.remove('js-scroll');
 });
 
-
 /* Map */
 
-// ymaps.ready(function () {
-//   const myMap = new ymaps.Map('map', {
-//     center: [59.912026, 30.422444],
-//     zoom: 13
-//   }, {
-//     searchControlProvider: 'yandex#search'
-//   }),
+ymaps.ready(init);
 
-//     // Создаём макет содержимого.
-//     MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-//       '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-//     ),
+function init() {
+  var myMap = new ymaps.Map("map", {
+    center: [59.912026, 30.422444],
+    zoom: 12.1,
+    // Элементы управления
+    controls: []
+  });
 
-//     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-//       hintContent: 'RNS Family',
-//       balloonContent: ''
-//     }, {
-//       // Опции.
-//       // Необходимо указать данный тип макета.
-//       iconLayout: 'default#image',
-//       // Своё изображение иконки метки.
-//       iconImageHref: 'map.png',
-//       // Размеры метки.
-//       iconImageSize: [520, 182],
-//       // Смещение левого верхнего угла иконки относительно
-//       // её "ножки" (точки привязки).
-//       iconImageOffset: [-50, -170]
-//     });
+  var myGeoObjects = [];
 
-//   myMap.geoObjects
-//     .add(myPlacemark)
-// });
+  myGeoObjects = new ymaps.Placemark([59.912026, 30.422444], {
+    hintContent: 'RNS Family',
+    balloonContent: 'Октябрьская набережная, 10к1',
+  }, {
+    iconLayout: 'default#image',
+    iconImageHref: 'img/map.png',
+    iconImageSize: [520, 188],
+    iconImageOffset: [-45, -175]
+  });
+
+  var clusterer = new ymaps.Clusterer({
+    clusterDisableClickZoom: false,
+    clusterOpenBalloonOnClick: false,
+  });
+
+  clusterer.add(myGeoObjects);
+  myMap.geoObjects.add(clusterer);
+  // Возможность изменения масштаба
+  // myMap.behaviors.disable('scrollZoom');
+}
 
 /* Preloader */
 

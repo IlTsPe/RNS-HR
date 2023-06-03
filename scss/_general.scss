@@ -110,6 +110,9 @@
     border-radius: 50%;
     cursor: pointer;
     background-color: var(--grey-color);
+    transition: ease-in 0.2s;
+    align-items: center;
+
 
     &-active {
       cursor: default;
@@ -156,7 +159,7 @@
 
   &__title {
     font-weight: 700;
-    font-size: 30px;
+    font-size: clamp(1.688rem, 1.587rem + 0.5vw, 2.188rem);
     line-height: 114%;
     text-align: inherit;
     margin-right: 12px;
@@ -245,4 +248,17 @@
   100% {
     opacity: 0;
   }
+}
+
+#map {
+  filter: invert(1);
+}
+
+.ymaps-2-1-79-image {
+  filter: invert(1);
+}
+
+.ymaps-2-1-79-balloon__content {
+  font-family: 'Manrope';
+
 }

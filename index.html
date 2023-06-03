@@ -3,7 +3,7 @@
 
 @include('partials/head.html')
 
-<body class="page__body js-scroll">
+<body class="page__body">
   <div class="wrapper">
     <div class="site-container">
       @include('partials/header.html')
@@ -17,13 +17,14 @@
         @include('partials/services.html')
         @include('partials/feedback.html')
         @include('partials/faq.html')
+        <div id="map" style="width: 100%; height: 640px"></div>
       </main>
       @include('partials/footer.html')
     </div>
   </div>
-  <div id="preloader">
+  <!-- <div id="preloader">
     <img src="img/preloader.gif" alt="Preloader">
-  </div>
+  </div> -->
 </body>
 
 </html>
