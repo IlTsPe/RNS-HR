@@ -2,6 +2,9 @@
 @import "vars";
 @import "fonts";
 
+html {
+  position: relative;
+}
 
 body {
   position: relative;
@@ -40,9 +43,10 @@ body {
 @import "./components/tasks";
 @import "./components/conditions";
 @import "./components/corp-life";
-@import "./components/faq";
 @import "./components/services";
 @import "./components/feedback";
+@import "./components/faq";
+@import "./components/footer";
 
 // media
 @import "./media";

@@ -168,7 +168,6 @@ const toggleItem = item => {
   };
 };
 
-
 /* Burger */
 
 const burger = document.querySelector('.burger'),
@@ -177,20 +176,17 @@ const burger = document.querySelector('.burger'),
   close = document.querySelector('.menu__close'),
   body = document.querySelector('body');
 
+function removeClasses() {
+  menu.classList.remove('active');
+  body.classList.remove('js-scroll');
+}
+
 burger.addEventListener('click', () => {
   menu.classList.add('active');
   body.classList.add('js-scroll');
 });
-
-close.addEventListener('click', () => {
-  menu.classList.remove('active');
-  body.classList.remove('js-scroll');
-});
-
-overlay.addEventListener('click', () => {
-  menu.classList.remove('active');
-  body.classList.remove('js-scroll');
-});
+close.addEventListener('click', removeClasses);
+overlay.addEventListener('click', removeClasses);
 
 /* Map */
 
@@ -232,9 +228,47 @@ function init() {
 window.onload = function () {
   let preloader = document.getElementById('preloader');
   preloader.classList.add('hide-preloader');
-  body.classList.add('js-scroll');
   setInterval(function () {
     preloader.classList.add('preloader-hidden');
-    body.classList.remove('js-scroll');
   }, 300);
 }
+
+/* Scroll */
+
+const anchor = document.querySelectorAll(".js-anchor");
+
+anchor.forEach(anc => {
+  anc.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const id = anc.getAttribute("href");
+    const elem = document.querySelector(id);
+
+    window.scroll({
+      top: elem.offsetTop,
+      behavior: "smooth"
+    });
+  });
+});
+
+
+/* Arrow Up */
+
+const arrowUp = document.querySelector('.pageup');
+const heroSection = document.querySelector('.hero');
+
+window.onscroll = () => {
+  const top = window.scrollY;
+  const offset = heroSection.offsetHeight;
+  if (top >= offset) {
+    arrowUp.classList.add('pageup--visible')
+  } else {
+    arrowUp.classList.remove('pageup--visible')
+  }
+}
+
+/* Phone mask */
+
+const phoneInput = document.querySelector('#phone');
+const inputMask = new Inputmask('+7 (999) 999-99-99');
+inputMask.mask(phoneInput);

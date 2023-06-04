@@ -4,7 +4,7 @@
         class="telegram">Telegram!</span>
     </h2>
     <span class="feedback__descr">Или оставь свои данные и мы сами с тобой свяжемся</span>
-    <form action="#" class="feedback__form">
+    <form action="mailer.php" method="POST" class="feedback__form">
       <div class="feedback__input">
         <label for="#name">ФИО</label>
         <input id="name" name="name" type="text" required placeholder="Введите Ваше имя">
@@ -14,8 +14,8 @@
         <input id="email" name="email" type="text" required placeholder="Введите Вашу почту">
       </div>
       <div class="feedback__input">
-        <label for="#number">Телефон</label>
-        <input id="number" type="number" required placeholder="Введите Ваш номер телефона">
+        <label for="#phone">Телефон</label>
+        <input id="phone" name="phone" type="phone" required placeholder="Введите Ваш номер телефона">
       </div>
       <button type="submit" class="common-button feedback__button">Свяжитесь со мной!</button>
     </form>

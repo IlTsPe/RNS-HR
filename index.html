@@ -4,8 +4,15 @@
 @include('partials/head.html')
 
 <body class="page__body">
+  <div id="preloader">
+    <img src="img/preloader.gif" alt="Preloader">
+  </div>
+
   <div class="wrapper">
     <div class="site-container">
+      <a href="#header" class="pageup js-anchor">
+        <img src="img/svg/up-arrow.svg" alt="Вверх">
+      </a>
       @include('partials/header.html')
       @include('partials/menu-burger.html')
       <main class="main">
@@ -22,9 +29,6 @@
       @include('partials/footer.html')
     </div>
   </div>
-  <!-- <div id="preloader">
-    <img src="img/preloader.gif" alt="Preloader">
-  </div> -->
 </body>
 
 </html>
