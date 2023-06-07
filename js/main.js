@@ -185,6 +185,7 @@ burger.addEventListener('click', () => {
   menu.classList.add('active');
   body.classList.add('js-scroll');
 });
+
 close.addEventListener('click', removeClasses);
 overlay.addEventListener('click', removeClasses);
 
@@ -251,16 +252,15 @@ anchor.forEach(anc => {
   });
 });
 
-
 /* Arrow Up */
 
 const arrowUp = document.querySelector('.pageup');
 const heroSection = document.querySelector('.hero');
 
 window.onscroll = () => {
-  const top = window.scrollY;
-  const offset = heroSection.offsetHeight;
-  if (top >= offset) {
+  const topWindow = window.scrollY;
+  const offsetHero = heroSection.offsetHeight;
+  if (topWindow >= offsetHero) {
     arrowUp.classList.add('pageup--visible')
   } else {
     arrowUp.classList.remove('pageup--visible')
