@@ -1,0 +1,25 @@
+@mixin flexP {
+  display: flex;
+  flex-direction: column;
+  color: red;
+}
+
+@mixin respond-to($media) {
+  @if $media ==small {
+    @media only screen and (max-width: var($small)) {
+      @content;
+    }
+  }
+
+  @if $media ==desktop {
+    @media only screen and (min-width: var($desktop)) {
+      @content;
+    }
+  }
+
+  @if $media ==hd {
+    @media only screen and (min-width: var($hd)) {
+      @content;
+    }
+  }
+}

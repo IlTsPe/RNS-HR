@@ -1,0 +1,7 @@
+:root {
+	--base-padding: 2rem;
+
+	@include respond-to(desktop) {
+		--base-padding: 7.5rem;
+	}
+}

@@ -28,16 +28,25 @@ body {
   min-height: 100%;
 }
 
-// \* {
+//\* {
 //   outline: 1px solid red !important;
 // }
 
 // общие стили
 @import "./general";
 
+//nav
+@import "./nav/variables";
+@import "./nav/mixins";
+@import "./nav/navbar";
+@import "./nav/texts";
+@import "./nav/variables-adaptive";
+
+//partners
+// @import "./partners/partners";
+// @import "./partners/swiper";
+
 // подключения компонентов страницы
-@import "./components/header";
-@import "./components/menu-burger";
 @import "./components/hero";
 @import "./components/partners";
 @import "./components/tasks";
@@ -46,6 +55,7 @@ body {
 @import "./components/services";
 @import "./components/feedback";
 @import "./components/faq";
+@import "./components/Ymap";
 @import "./components/footer";
 
 // media

@@ -1,0 +1,130 @@
+.partners {
+  display: flex;
+  flex-direction: column;
+  //width: 100%;
+  padding: 0 var(--base-padding);
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+
+  @include respond-to(desktop) {
+    margin-top: 6rem;
+    margin-bottom: 9.7rem;
+  }
+}
+
+.slider-container.slider-2 {
+  margin-top: 2rem;
+  margin-bottom: 5.6rem;
+}
+
+.slider-2 .swiper-wrapper {
+  display: flex;
+  transition-timing-function: linear !important;
+}
+
+.partners__companies {
+  display: flex;
+  flex-wrap: nowrap;
+  column-gap: 4rem;
+  row-gap: 0.8rem;
+  align-items: start;
+
+  font-family: Manrope, sans-serif;
+  font-size: 5.6rem;
+  font-weight: 700;
+  color: #FFFFFF;
+
+  @include respond-to(desktop) {
+    flex-wrap: wrap;
+  }
+
+  ;
+}
+
+.partners__about {
+  display: flex;
+  flex-direction: column;
+  align-self: end;
+
+  .about__description {
+    font-family: Manrope, sans-serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: white;
+
+    @include respond-to(desktop) {
+      font-size: 3.5rem;
+    }
+  }
+
+  .about__sub-information {
+    font-family: Manrope, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.3);
+    align-self: end;
+
+    @include respond-to(desktop) {
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+.partners__companies {
+  p {
+    display: none;
+    font-size: 3rem;
+    line-height: 1.64em;
+
+  }
+
+  p:hover {
+    opacity: 0;
+  }
+
+  @include respond-to(desktop) {
+    p {
+      display: block;
+
+    }
+  }
+}
+
+.company-card {
+  position: relative;
+
+  img,
+  svg {
+    position: relative;
+    height: 125px;
+    max-width: 70vw;
+    width: auto;
+    object-fit: contain;
+    visibility: visible;
+  }
+
+  @include respond-to(desktop) {
+
+    img,
+    svg {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      visibility: hidden;
+    }
+  }
+}
+
+.company-card:hover {
+  @include respond-to(desktop) {
+
+    img,
+    svg {
+      visibility: visible;
+    }
+
+    p {
+      opacity: 0;
+    }
+  }
+}

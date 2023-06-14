@@ -17,6 +17,10 @@
     transition: ease-out 0.3s;
     height: 100%;
 
+    &--2 picture {
+      order: 2;
+    }
+
     &:hover {
       background-color: var(--yellow-color);
     }
@@ -43,9 +47,26 @@
 
     &--2::before {
       top: -661px;
-      left: -357px;
+      left: 312px;
       background-image: url(../img/helmet--2.png);
       z-index: 20;
+    }
+
+    &--2::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 15%;
+      background-image: url(../img/sekira--2.png);
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: bottom;
+      opacity: 0;
+      visibility: hidden;
+      width: 100%;
+      height: 100%;
+      transition: ease-out 0.5s;
+
     }
 
     &--3::before {
@@ -64,12 +85,19 @@
       background-repeat: no-repeat;
       background-size: auto;
       background-position: bottom;
+      opacity: 0;
+      visibility: hidden;
       width: 100%;
       height: 100%;
       z-index: 30;
     }
 
     &:hover::before {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &:hover::after {
       opacity: 1;
       visibility: visible;
     }
@@ -81,6 +109,7 @@
     &--2:hover::before {
       top: -631px;
     }
+
 
     &--3:hover::before {
       top: -56.2%;
