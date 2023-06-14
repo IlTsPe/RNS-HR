@@ -10,15 +10,9 @@
 
   <div class="wrapper">
     <div class="site-container">
-      <a href="#header" class="pageup js-anchor">
-        <img src="img/svg/up-arrow.svg" alt="Вверх">
-      </a>
-      <!-- @include('partials/header.html') -->
       @include('partials/nav.html')
-      <!-- @include('partials/menu-burger.html') -->
       <main class="main">
         @include('partials/hero.html')
-        <!-- @include('partials/partners.html') -->
         @include('partials/partner.html')
         @include('partials/tasks.html')
         @include('partials/conditions.html')
@@ -29,6 +23,9 @@
         <div id="map" style="width: 100%; height: 640px"></div>
       </main>
       @include('partials/footer.html')
+      <a href="#hero" class="pageup js-anchor">
+        <img src="img/svg/up-arrow.svg" alt="Вверх">
+      </a>
     </div>
   </div>
 </body>

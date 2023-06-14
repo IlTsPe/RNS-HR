@@ -26,6 +26,7 @@
   z-index: 200;
   clip-path: circle(100%);
   transition: 0.7s;
+  z-index: 20;
 
   ul {
     display: flex;
@@ -120,7 +121,7 @@
 .main-nav__btn-mobile {
   display: block;
   position: fixed;
-  top: 0;
+  top: -11px;
   left: 0;
   padding: 3rem var(--base-padding) 1rem var(--base-padding);
   border: none;
@@ -131,6 +132,7 @@
   font-weight: bolder;
   background-color: transparent;
   border-radius: 100%;
+  z-index: 20;
 
   @include respond-to(desktop) {
     display: none;

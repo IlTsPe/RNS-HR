@@ -9,13 +9,12 @@ function smoothScroll() {
 
       const id = anc.getAttribute("href");
       const elem = document.querySelector(id);
-
       window.scroll({
         top: elem.offsetTop,
-        behavior: "smooth",
-      });
-    });
-  });
-};
+        behavior: "smooth"
+      })
+    })
+  })
+}
 
 export default smoothScroll;

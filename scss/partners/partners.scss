@@ -5,18 +5,15 @@
   padding: 0 var(--base-padding);
   margin-top: 5rem;
   margin-bottom: 3rem;
-
   @include respond-to(desktop) {
     margin-top: 6rem;
     margin-bottom: 9.7rem;
   }
 }
-
-.slider-container.slider-2 {
+.slider-container.slider-2{
   margin-top: 2rem;
   margin-bottom: 5.6rem;
 }
-
 .slider-2 .swiper-wrapper {
   display: flex;
   transition-timing-function: linear !important;
@@ -37,8 +34,6 @@
   @include respond-to(desktop) {
     flex-wrap: wrap;
   }
-
-  ;
 }
 
 .partners__about {
@@ -51,7 +46,6 @@
     font-size: 2.4rem;
     font-weight: 500;
     color: white;
-
     @include respond-to(desktop) {
       font-size: 3.5rem;
     }
@@ -63,7 +57,7 @@
     font-weight: 500;
     color: rgba(255, 255, 255, 0.3);
     align-self: end;
-
+    
     @include respond-to(desktop) {
       margin-top: 2.5rem;
     }
@@ -73,7 +67,7 @@
 .partners__companies {
   p {
     display: none;
-    font-size: 3rem;
+    font-size:3rem;
     line-height: 1.64em;
 
   }

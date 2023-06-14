@@ -1,10 +1,10 @@
-@import "./vendor/normalize";
-@import "vars";
-@import "fonts";
-
 html {
   position: relative;
 }
+
+@import "./vendor/normalize";
+@import "vars";
+@import "fonts";
 
 body {
   position: relative;
@@ -34,21 +34,19 @@ body {
 
 // общие стили
 @import "./general";
+@import "./variables";
+@import "./mixins";
 
 //nav
-@import "./nav/variables";
-@import "./nav/mixins";
 @import "./nav/navbar";
 @import "./nav/texts";
 @import "./nav/variables-adaptive";
 
 //partners
-// @import "./partners/partners";
-// @import "./partners/swiper";
+@import "./partners/partners.scss";
 
 // подключения компонентов страницы
 @import "./components/hero";
-@import "./components/partners";
 @import "./components/tasks";
 @import "./components/conditions";
 @import "./components/corp-life";

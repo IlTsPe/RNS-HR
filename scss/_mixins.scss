@@ -6,19 +6,19 @@
 
 @mixin respond-to($media) {
   @if $media ==small {
-    @media only screen and (max-width: var($small)) {
+    @media only screen and (max-width: $small) {
       @content;
     }
   }
 
   @if $media ==desktop {
-    @media only screen and (min-width: var($desktop)) {
+    @media only screen and (min-width: $desktop) {
       @content;
     }
   }
 
   @if $media ==hd {
-    @media only screen and (min-width: var($hd)) {
+    @media only screen and (min-width: $hd) {
       @content;
     }
   }

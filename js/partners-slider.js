@@ -1,12 +1,14 @@
-import { Swiper, Autoplay } from "swiper";
+// import { Swiper, Autoplay } from "swiper";
 Swiper.use([Autoplay]);
 const partnerSlider = document.querySelector(".slider-container.slider-2");
 
 let mySliderPartner;
 
 function mobileSlider() {
+  console.log('qwe');
   if (window.innerWidth <= 1024 && partnerSlider.dataset.mobile == "false") {
     mySliderPartner = new Swiper(partnerSlider, {
+      modules: [Autoplay],
       slidesPerView: "auto",
       spaceBetween: 10,
       loop: true,
