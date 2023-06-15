@@ -28,7 +28,7 @@ body {
   min-height: 100%;
 }
 
-//\* {
+// \* {
 //   outline: 1px solid red !important;
 // }
 
@@ -37,16 +37,14 @@ body {
 @import "./variables";
 @import "./mixins";
 
-//nav
+//header
 @import "./nav/navbar";
 @import "./nav/texts";
 @import "./nav/variables-adaptive";
 
-//partners
-@import "./partners/partners.scss";
-
 // подключения компонентов страницы
 @import "./components/hero";
+@import "./components/partners";
 @import "./components/tasks";
 @import "./components/conditions";
 @import "./components/corp-life";
