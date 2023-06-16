@@ -1,18 +1,14 @@
 .navbar {
-  //width: min($max-width, 100%);
-  width: 100%;
-  max-width: var(--hd);
+  padding: 0 var(--base-padding);
+  position: absolute;
+  left: 0;
+  top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   vertical-align: top;
-  position: absolute;
-  z-index: 10;
-  left: 50%;
-  top: 0;
-  transform: translate(-50%);
-  padding: 0 var(--base-padding);
-  //overflow: hidden;
+  width: 100%;
+  z-index: 99;
 }
 
 .main-nav {
@@ -118,6 +114,18 @@
   ;
 }
 
+.cods {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .main-nav__btn-mobile {
   display: block;
   position: fixed;
@@ -126,13 +134,12 @@
   padding: 3rem var(--base-padding) 1rem var(--base-padding);
   border: none;
   background-clip: padding-box;
-  z-index: 201;
   color: white;
   font-size: 3rem;
   font-weight: bolder;
   background-color: transparent;
   border-radius: 100%;
-  z-index: 20;
+  z-index: 201;
 
   @include respond-to(desktop) {
     display: none;
