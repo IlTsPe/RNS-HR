@@ -2,44 +2,34 @@
   filter: invert(1);
 }
 
+.ymaps-2-1-79-balloon {
+  filter: invert(1);
+}
+
+.balloon {
+  font-family: 'Manrope';
+  font-size: 38px;
+  font-weight: 800;
+
+  &__address {
+    line-height: 105%;
+  }
+}
+
 .ymaps-2-1-79-image {
   filter: invert(1);
+}
+
+.ymaps-2-1-79-balloon__tail::after {}
+
+.ymaps-2-1-79-balloon__layout {
+  border-radius: 16px;
 }
 
 .ymaps-2-1-79-balloon__content {
   font-family: 'Manrope';
 }
 
-.pageup {
-  position: fixed;
-  display: block;
-  bottom: 40px;
-  right: 40px;
-  width: 50px;
-  height: 50px;
-  opacity: 0;
-  visibility: hidden;
-  filter: drop-shadow(0px 0px 8px var(--denim-color));
-  transition: ease-in-out 0.2s;
-  z-index: 99;
-
-  &:hover {
-    opacity: 1;
-  }
-
-  &--visible {
-    opacity: 0.5;
-    visibility: visible;
-  }
-}
-
 .ymaps-2-1-79-balloon__layout {
   background-color: black;
-}
-
-#id_16866535894591932767 {
-  font-size: 38px;
-  line-height: 105%;
-  height: 170px !important;
-  width: 370px !important;
 }

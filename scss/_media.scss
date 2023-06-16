@@ -47,7 +47,7 @@
   .services {
     &-slide {
       &--3:hover::after {
-        top: calc(20vh - 83vw);
+        top: calc(20vh - 84.5vw);
       }
 
       &--3:hover::before {
@@ -126,6 +126,7 @@
   .services {
     &__img {
       width: fit-content;
+      max-height: 600px;
     }
 
     &-content {
@@ -133,8 +134,8 @@
       grid-template-columns: auto;
 
       & picture {
+        max-height: 600px;
         order: 2;
-        height: inherit;
       }
     }
 
