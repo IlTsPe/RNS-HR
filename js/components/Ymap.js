@@ -1,33 +1,5 @@
 /* Map */
 
-// ymaps.ready(init);
-
-// function init() {
-//   var myMap = new ymaps.Map("map", {
-//     center: [59.912026, 30.422444],
-//     zoom: 12.1,
-//     // Элементы управления
-//     controls: []
-//   });
-
-//   let myGeoObjects = new ymaps.Placemark([59.912026, 30.422444], {
-//     hintContent: 'RNS Family',
-//     balloonContent: `
-//     <div class="balloon">
-//       <div class="balloon__address>Тестовая</div>
-//     </div>
-//     `
-//   }, {
-//     iconLayout: 'default#image',
-//     iconImageHref: 'img/map.png',
-//     iconImageSize: [520, 188],
-//     iconImageOffset: [-45, -175]
-//   });
-//   myMap.geoObjects.add(myGeoObjects);
-//   // Возможность изменения масштаба
-//   // myMap.behaviors.disable('scrollZoom');
-// };
-
 let center = [59.912026, 30.422444];
 
 function init() {

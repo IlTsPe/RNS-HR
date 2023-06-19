@@ -3,7 +3,7 @@
   position: relative;
 
   &__title {
-    margin-bottom: 48px;
+    margin-bottom: 0;
   }
 
   &__slider {
@@ -11,7 +11,7 @@
   }
 
   &__swiper {
-    padding: 48px 0;
+    padding: 80px 0;
   }
 
   &__pagination {
@@ -29,8 +29,8 @@
     left: 20px;
   }
 
-  &-align {
-    top: 42%;
+  &-btn {
+    top: 57%;
   }
 }
 
@@ -39,9 +39,9 @@
   justify-content: center;
 
   &__container {
-    width: 400px;
-    height: 400px;
-    perspective: 1000px;
+    width: 90%;
+    height: 500px;
+    perspective: 1700px;
   }
 
   &__content {
@@ -94,9 +94,9 @@
 
   &__back {
     padding: 0 20px;
-    font-size: 35px;
-    font-weight: 500;
-    line-height: 120%;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 130%;
     height: 100%;
     transform: rotateY(180deg);
     color: var(--white-color);

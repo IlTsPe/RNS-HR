@@ -25,7 +25,8 @@ const hero = new Swiper('.swiper-hero--js', {
 
 const tasks = new Swiper('.swiper-tasks', {
   modules: [Navigation, Pagination, Autoplay],
-  spaceBetween: 15,
+  spaceBetween: 50,
+  loop: true,
   navigation: {
     nextEl: '.tasks__next',
     prevEl: '.tasks__prev',
@@ -35,17 +36,17 @@ const tasks = new Swiper('.swiper-tasks', {
     clickable: true,
   },
   simulateTouch: false,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
   speed: 600,
   breakpoints: {
     1000: {
-      slidesPerView: 3,
+      slidesPerView: 2,
     },
     800: {
-      slidesPerView: 2,
+      slidesPerView: 1,
     },
     320: {
       slidesPerView: 1,

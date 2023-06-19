@@ -47,7 +47,7 @@
 
     &--2::before {
       top: -661px;
-      left: 312px;
+      left: 311px;
       background-image: url(../img/helmet--2.png);
       z-index: 20;
     }
@@ -71,7 +71,7 @@
 
     &--3::before {
       top: -60%;
-      left: -357px;
+      left: -350px;
       z-index: 25;
       background-image: url(../img/gun--3.png);
     }
@@ -79,8 +79,8 @@
     &--3::after {
       content: '';
       position: absolute;
-      top: -87.2%;
-      left: -519px;
+      top: -82%;
+      left: -507px;
       background-image: url(../img/thum--3.png);
       background-repeat: no-repeat;
       background-size: auto;
@@ -109,7 +109,6 @@
     &--2:hover::before {
       top: -631px;
     }
-
 
     &--3:hover::before {
       top: -56.2%;
