@@ -19,7 +19,7 @@
       }
 
       &--3:hover::after {
-        left: -37%;
+        left: -36.5%;
         top: -82.5%;
       }
 
@@ -50,7 +50,8 @@
   .services {
     &-slide {
       &--3:hover::after {
-        top: -85%;
+        top: -79.5%;
+        left: -36.5%;
       }
 
       &--3:hover::before {
@@ -60,11 +61,11 @@
   }
 }
 
-@media (max-width: 1215px) {
+@media (max-width: 1212px) {
   .services {
     &-slide {
       &--3:hover::after {
-        top: -84%;
+        top: -79%;
       }
     }
   }
@@ -79,11 +80,12 @@
       }
 
       &--3:hover::after {
-        top: -82%;
+        top: calc(25vh + -86vw);
       }
 
       &--3:hover::before {
-        top: -48%;
+        top: calc(100vh / 2 + -86vw);
+        ;
       }
     }
 
@@ -115,6 +117,11 @@
       top: -61%;
     }
 
+    &--3:hover::after {
+      top: -73%;
+      background-size: 8%;
+    }
+
     &--3:hover::before {
       top: -45%;
     }
@@ -123,6 +130,10 @@
 
 @media (max-width: 1090px) {
   .services-slide {
+
+    &--3:hover::after {
+      top: -71%;
+    }
 
     &--3:hover::before {
       left: -23%;
@@ -275,12 +286,12 @@
     gap: 80px;
   }
 
-  .tasks-btn {
-    top: 105%;
-  }
-
   .tasks {
-    padding-bottom: 50px;
+    padding-bottom: 40px;
+
+    &__pagination {
+      bottom: -20px;
+    }
   }
 
   .partners__title {
@@ -403,8 +414,8 @@
     }
   }
 
-  .tasks-btn {
-    top: 105%;
+  .tasks__swiper {
+    padding: 30px 0;
   }
 
   .conditions {

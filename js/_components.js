@@ -7,3 +7,4 @@ import "./components/arrowUP.js";
 import "./components/accordion.js";
 import './components/fontSize.js';
 import "./components/Ymap.js";
+import "./components/animations.js";

@@ -1,6 +1,7 @@
 .tasks {
   padding-top: var(--padding-top);
   position: relative;
+  opacity: 0;
 
   &__title {
     margin-bottom: 0;
@@ -16,7 +17,7 @@
 
   &__pagination {
     position: absolute;
-    bottom: -30px;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -30,7 +31,7 @@
   }
 
   &-btn {
-    top: 57%;
+    top: 53%;
   }
 }
 
@@ -40,7 +41,7 @@
 
   &__container {
     width: 90%;
-    height: 500px;
+    height: 50vh;
     perspective: 1700px;
   }
 
@@ -94,7 +95,8 @@
 
   &__back {
     padding: 0 20px;
-    font-size: 20px;
+    overflow: auto;
+    font-size: clamp(1.375rem, 1.275rem + 0.5vw, 1.875rem);
     font-weight: 400;
     line-height: 130%;
     height: 100%;

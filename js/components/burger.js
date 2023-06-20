@@ -31,13 +31,13 @@ mainNavBtn.addEventListener('click', changeMenuState);
 
 
 window.addEventListener('scroll', () => {
-  let burgerLine = document.querySelectorAll('.js-burger-line');
-  let sectionToChange = document.querySelector('.services');
-  let fromTop = window.scrollY;
+  const burgerLine = document.querySelectorAll('.js-burger-line');
+  const sectionToChange = document.querySelector('.services');
+  const fromTop = window.scrollY;
 
   burgerLine.forEach(line => {
     if (
-      sectionToChange.offsetTop <= fromTop &&
+      sectionToChange.offsetTop <= fromTop - 40 &&
       sectionToChange.offsetTop + sectionToChange.offsetHeight > fromTop
     ) {
       line.style.backgroundColor = 'red';
