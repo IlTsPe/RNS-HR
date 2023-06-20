@@ -42,7 +42,7 @@ const tasks = new Swiper('.swiper-tasks', {
   // },
   speed: 600,
   breakpoints: {
-    800: {
+    900: {
       slidesPerView: 2,
     },
   },

@@ -1,6 +1,8 @@
 .corp-life {
   padding-top: var(--padding-top);
   position: relative;
+  opacity: 0;
+
 
   &-slide {
     display: flex;

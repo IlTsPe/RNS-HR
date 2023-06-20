@@ -1,6 +1,7 @@
 .services {
   padding-top: var(--padding-top);
   position: relative;
+  opacity: 0;
 
   &__title {
     margin-bottom: 25px;
