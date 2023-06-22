@@ -1,4 +1,5 @@
-'use strict'
+import axios from 'axios';
+
 
 const token = '6235234686:AAHuG42TiUhjZiUbA7sIUK1i_JpujZecv2Y';
 const chatId = '-987994014';
@@ -23,9 +24,9 @@ document.querySelector('.feedback__form').addEventListener('submit', function (e
       const target = e.target;
       if (target && !target.classList.contains('confirm__content')) {
         modalConfirm.classList.remove('confirm--active');
-      }
+      };
     });
-  }
+  };
 
   axios.post(urlApi, {
     chat_id: chatId,
