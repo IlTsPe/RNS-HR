@@ -1,0 +1,42 @@
+.confirm {
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 60;
+  background-color: rgba(0, 0, 0, .3);
+
+  transition: linear .2s;
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    place-content: center;
+    border-radius: 30px;
+    background-color: rgb(142, 233, 115);
+    border: solid 5px rgb(15, 150, 44);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+    font-size: clamp(1.5rem, 1.238rem + 1.31vw, 2.813rem);
+    text-align: center;
+    color: var(--black-color);
+  }
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
