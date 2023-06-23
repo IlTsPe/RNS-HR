@@ -4,9 +4,17 @@
   --liquorice-color: #0d1e29;
   --grey-color: #9ea5a9;
   --denim-color: #1264B6;
-  --red-color: red;
+  --red-color: rgb(223, 36, 67);
   --yellow-color: #faff00;
 
   // sections' padding
   --padding-top: clamp(1.875rem, 0.625rem + 6.25vw, 8.125rem);
 }
+
+$small: 374px;
+$desktop: 1024px;
+$hd: 1920px;
+
+$gray-opacity-middle: rgba(255, 255, 255, 0.6);
+$white-opacity-middle: rgba(255, 255, 255, 0.7);
+$white-opacity-light: rgba(255, 255, 255, 0.4);

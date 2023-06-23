@@ -35,7 +35,6 @@ body {
 
 // общие стили
 @import "./general";
-@import "./variables";
 @import "./mixins";
 
 //header
@@ -51,11 +50,14 @@ body {
 @import "./components/corp-life";
 @import "./components/services";
 @import "./components/feedback";
-@import "./components/formModal";
 @import "./components/faq";
 @import "./components/Ymap";
 @import "./components/footer";
+
+// Доработки
+@import "./components/formModal";
 @import "./components/animation";
+@import "./components/popup";
 
 // media
 @import "./media";

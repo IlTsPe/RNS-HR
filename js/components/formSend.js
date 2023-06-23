@@ -50,3 +50,63 @@ document.querySelector('.feedback__form').addEventListener('submit', function (e
       true
     });
 });
+
+
+
+/* Валидация формы */
+
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const phoneInput = document.querySelector('#phone');
+const namePopup = document.querySelector('.popup-name');
+const emailPopup = document.querySelector('.popup-email');
+const phonePopup = document.querySelector('.popup-phone');
+
+function removeInvalidActive(input) {
+  input.classList.remove('feedback__input--invalid');
+}
+
+function addInvalidActive(input, popup) {
+  input.classList.add('feedback__input--invalid');
+  popup.classList.add('popup--active');
+  setInterval(() => {
+    popup.classList.remove('popup--active');
+  }, 2500);
+}
+
+function nameValidation() {
+  const nameRegEx = /[^а-я\s]+/gi;
+  const validName = nameInput.value.replace(nameRegEx, "?");
+  const checkName = validName.indexOf('?') > -1;
+  if (!checkName) {
+    removeInvalidActive(nameInput);
+    return true
+  } else {
+    addInvalidActive(nameInput, namePopup);
+    return false
+  };
+};
+
+function emailValidation() {
+  const emailRegEx = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+  const validEmail = emailRegEx.test(emailInput.value);
+  if (validEmail) {
+    removeInvalidActive(emailInput);
+  } else {
+    addInvalidActive(emailInput, emailPopup);
+  };
+};
+
+function phoneValidation() {
+  const phoneRegEx = /\W*_*/g;
+  const validPhone = phoneInput.value.replace(phoneRegEx, '');
+  if (validPhone.length == 11) {
+    removeInvalidActive(phoneInput);
+  } else {
+    addInvalidActive(phoneInput, phonePopup);
+  };
+};
+
+nameInput.addEventListener('change', nameValidation);
+emailInput.addEventListener('change', emailValidation);
+phoneInput.addEventListener('change', phoneValidation);
