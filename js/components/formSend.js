@@ -58,6 +58,8 @@ const namePopup = document.querySelector('.popup-name');
 const emailPopup = document.querySelector('.popup-email');
 const phonePopup = document.querySelector('.popup-phone');
 
+let validPhone;
+
 function addInvalidActive(input, popup) {
   input.classList.add('feedback__input--invalid');
   popup.classList.add('popup--active');
@@ -85,8 +87,9 @@ function emailValidation() {
 
 function phoneValidation() {
   const phoneRegEx = /\W*_*/g;
-  const validPhone = phoneInput.value.replace(phoneRegEx, '');
+  validPhone = phoneInput.value.replace(phoneRegEx, '');
   validPhone.length == 11 ? removeInvalidActive(phoneInput) : addInvalidActive(phoneInput, phonePopup);
+  return validPhone;
 };
 
 function btnValidation() {
@@ -100,7 +103,7 @@ function btnValidation() {
     return inputsStatusArr;
   });
 
-  if (inputsStatusArr.includes(true)) {
+  if (inputsStatusArr.includes(true) || nameInput.value == '' || emailInput.value == '' || validPhone == undefined) {
     formBtn.classList.add('disabled-button');
     formBtn.setAttribute('disabled', true);
   } else {
@@ -108,10 +111,6 @@ function btnValidation() {
     formBtn.removeAttribute('disabled')
   };
 };
-
-nameValidation();
-emailValidation();
-phoneValidation();
 
 nameInput.addEventListener('change', () => {
   nameValidation();

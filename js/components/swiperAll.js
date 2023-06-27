@@ -21,12 +21,12 @@ const hero = new Swiper('.swiper-hero--js', {
   delay: 3000,
   simulateTouch: true,
   speed: 800,
+  loop: true,
 });
 
 const tasks = new Swiper('.swiper-tasks', {
   modules: [Navigation, Pagination, Autoplay],
   spaceBetween: 50,
-  loop: true,
   navigation: {
     nextEl: '.tasks__next',
     prevEl: '.tasks__prev',
@@ -35,12 +35,11 @@ const tasks = new Swiper('.swiper-tasks', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  simulateTouch: false,
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false,
-  // },
-  speed: 600,
+  autoplay: true,
+  delay: 3000,
+  simulateTouch: true,
+  speed: 800,
+  loop: true,
   breakpoints: {
     900: {
       slidesPerView: 2,
@@ -60,8 +59,11 @@ const conditions = new Swiper('.swiper-conditions--js', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  simulateTouch: true,
+  autoplay: true,
+  delay: 3000,
   speed: 600,
+  simulateTouch: true,
+  loop: true,
 });
 
 const corpLife = new Swiper('.swiper-corp-life--js', {
@@ -75,12 +77,13 @@ const corpLife = new Swiper('.swiper-corp-life--js', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  simulateTouch: true,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
   },
+  autoplay: true,
   speed: 600,
+  simulateTouch: true,
   loop: true,
   centeredSlides: true,
 
@@ -109,9 +112,11 @@ new Swiper('.swiper-services--js', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  simulateTouch: false,
-  // autoHeight: true,
-  speed: 800,
+  autoplay: true,
+  delay: 3000,
+  speed: 600,
+  simulateTouch: true,
+  loop: true,
 });
 
 

@@ -24,8 +24,12 @@
   overflow: hidden;
   gap: clamp(0.188rem, -0.963rem + 5.75vw, 5.938rem);
 
+  & img {
+    max-width: 20%;
+  }
+
   &__text {
-    font-size: clamp(1.5rem, 1.023rem + 2.39vw, 2.813rem);
+    font-size: clamp(1.0rem, 0.723rem + 2.39vw, 2.813rem);
     line-height: 150%;
     max-width: 680px;
     color: var(--grey-color);
