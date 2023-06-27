@@ -136,7 +136,7 @@
   text-transform: uppercase;
   color: var(--white-color);
   background-color: var(--denim-color);
-  transition: ease-in 0.2s;
+  transition: ease-in-out 0.2s;
 
   &:hover,
   &:focus {
@@ -275,5 +275,11 @@
 }
 
 .disabled-button {
-  background-color: #fff;
+  background-color: #5e5e5e;
+  cursor: default;
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+  }
 }
